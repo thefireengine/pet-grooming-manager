@@ -30,4 +30,7 @@ export const clientSchema = yup.object().shape({
         .string()
         .optional()
         .max(1000, 'Notes must not exceed 1000 characters'),
+    is_active: yup
+        .boolean()
+        .required('Active status is required')
 }); 

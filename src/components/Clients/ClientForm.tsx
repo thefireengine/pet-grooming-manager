@@ -21,8 +21,8 @@ interface ClientFormData {
     last_name: string;
     email: string;
     phone: string;
-    address: string;
-    notes: string;
+    address?: string;
+    notes?: string;
     is_active: boolean;
 }
 
