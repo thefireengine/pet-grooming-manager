@@ -6,6 +6,8 @@ import {
     Typography,
     Button,
     CircularProgress,
+    SvgIcon,
+    SvgIconProps,
 } from '@mui/material';
 import {
     People as PeopleIcon,
@@ -63,7 +65,7 @@ export const Dashboard: React.FC = () => {
     const StatCard: React.FC<{
         title: string;
         value: number;
-        icon: React.ReactNode;
+        icon: React.ReactElement<SvgIconProps>;
         color: string;
     }> = ({ title, value, icon, color }) => (
         <Paper
@@ -86,7 +88,7 @@ export const Dashboard: React.FC = () => {
                     justifyContent: 'center',
                 }}
             >
-                {React.cloneElement(icon as React.ReactElement, {
+                {React.cloneElement(icon, {
                     sx: { fontSize: 40, color },
                 })}
             </Box>

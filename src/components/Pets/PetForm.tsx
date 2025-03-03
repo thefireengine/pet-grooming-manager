@@ -29,7 +29,7 @@ interface PetFormData {
     weight: number;
     client_id: string;
     status: 'active' | 'inactive';
-    notes: string;
+    notes?: string;
 }
 
 const initialFormData: PetFormData = {
